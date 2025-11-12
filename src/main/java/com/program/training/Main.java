@@ -8,6 +8,7 @@ import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorit
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
+import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorithm;
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
 import com.program.training.algorithm.twonumbers.TwoNumbersAlgorithm;
 import com.program.training.test.data.*;
@@ -43,8 +44,38 @@ public class Main
         //doBinarySearchAlgorithm();
         //doMergeIntervalsAlgorithm();
         //doFindKPairsSmallestSumsAlgorithm();
-        doSlidingWindowMedianAlgorithm();
+        //doSlidingWindowMedianAlgorithm();
+        doTopKFrequentWordsAlgorithm();
+    }
 
+    /**
+     * 692. Top K Frequent Words
+     */
+    private static void doTopKFrequentWordsAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Top K Frequent Words Algorithm practice!");
+        LOGGER.info("Starting Top K Frequent Words Algorithm...");
+        LOGGER.info("Top K Frequent Words Algorithm:");
+
+        TopKFrequentWordsAlgorithm topKFrequentWordsAlgorithm = new TopKFrequentWordsAlgorithm();
+
+        List<String> case1 = topKFrequentWordsAlgorithm.topKFrequent(TopKFrequentWordsAlgorithmData.words_1,
+                TopKFrequentWordsAlgorithmData.k_1);
+
+        LOGGER.info(RESULT, case1);
+        assertEquals("[i, love]", case1.stream().map(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [\"i\",\"love\"], number of occurrence being 2 and 1 respectively");
+
+        List<String> case2 = topKFrequentWordsAlgorithm.topKFrequent(TopKFrequentWordsAlgorithmData.words_2,
+                TopKFrequentWordsAlgorithmData.k_2);
+
+        LOGGER.info(RESULT, case2);
+        assertEquals("[the, is, sunny, day]", case2.stream().map(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [\"the\",\"is\",\"sunny\",\"day\"], number of occurrence being 4, 3, 2 and 1 respectively");
+
+        LOGGER.info("Ending Top K Frequent Words Algorithm...");
     }
 
     /**
@@ -53,8 +84,8 @@ public class Main
     private static void doSlidingWindowMedianAlgorithm()
     {
         LOGGER.info("Hello and welcome to Sliding Window Median Algorithm practice!");
-        LOGGER.info("Starting Sliding Window Median Algorithm Algorithm...");
-        LOGGER.info("Sliding Window Median Algorithm Algorithm:");
+        LOGGER.info("Starting Sliding Window Median Algorithm...");
+        LOGGER.info("Sliding Window Median Algorithm:");
 
         SlidingWindowMedianAlgorithm slidingWindowMedianAlgorithm = new SlidingWindowMedianAlgorithm();
 
@@ -98,9 +129,8 @@ public class Main
                 Arrays.stream(case5).mapToObj(String::valueOf).collect(Collectors.joining(", ", "[", "]")),
                 "The sequence: [-2.147483648E9, -0.5, -0.5, -2.147483648E9, -2.147483648E9, -0.5, 2.147483648E9, 2.147483648E9, 2.147483648E9, -0.5, -0.5, -0.5]");
 
-        LOGGER.info("Sliding Window Median Algorithm Algorithm...");
+        LOGGER.info("Ending Sliding Window Median Algorithm...");
     }
-
 
     /**
      * 373. Find K Pairs with Smallest Sums
