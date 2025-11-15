@@ -1,5 +1,7 @@
 package com.program.training.test.data;
 
+import com.program.training.test.data.api.ListNode;
+
 /**
  * Class with test data for Two Numbers algorithm
  *

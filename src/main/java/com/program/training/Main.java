@@ -12,6 +12,7 @@ import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorit
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
 import com.program.training.algorithm.twonumbers.TwoNumbersAlgorithm;
 import com.program.training.test.data.*;
+import com.program.training.test.data.api.ListNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,17 +36,17 @@ public class Main
 
     public static void main(String[] args)
     {
-        //doTwoNumbersAlgorithm();
-        //doTriangleAlgorithm();
-        //doMergeKSortedListsAlgorithm();
-        //doSingleNumberAlgorithm();
-        //doFourSumAlgorithm();
-        //doGuessNumberHigherOrLowerAlgorithm();
-        //doBinarySearchAlgorithm();
-        //doMergeIntervalsAlgorithm();
-        //doFindKPairsSmallestSumsAlgorithm();
-        //doSlidingWindowMedianAlgorithm();
-        doTopKFrequentWordsAlgorithm();
+//        doTwoNumbersAlgorithm();
+//        doTriangleAlgorithm();
+//        doMergeKSortedListsAlgorithm();
+//        doSingleNumberAlgorithm();
+//        doFourSumAlgorithm();
+//        doGuessNumberHigherOrLowerAlgorithm();
+//        doBinarySearchAlgorithm();
+//        doMergeIntervalsAlgorithm();
+//        doFindKPairsSmallestSumsAlgorithm();
+//        doSlidingWindowMedianAlgorithm();
+//        doTopKFrequentWordsAlgorithm();
     }
 
     /**

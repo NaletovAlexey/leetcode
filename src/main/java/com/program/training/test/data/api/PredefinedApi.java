@@ -1,4 +1,4 @@
-package com.program.training.test.data;
+package com.program.training.test.data.api;
 
 /**
  * Contains different predefined API's for testing

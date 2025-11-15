@@ -1,6 +1,6 @@
 package com.program.training.algorithm.guessnumber;
 
-import com.program.training.test.data.PredefinedApi;
+import com.program.training.test.data.api.PredefinedApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

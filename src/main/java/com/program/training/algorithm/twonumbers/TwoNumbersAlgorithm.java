@@ -1,6 +1,6 @@
 package com.program.training.algorithm.twonumbers;
 
-import com.program.training.test.data.ListNode;
+import com.program.training.test.data.api.ListNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
