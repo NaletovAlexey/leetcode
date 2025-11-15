@@ -1,5 +1,6 @@
 package com.program.training;
 
+import com.program.training.algorithm.balancedbinarytree.BalancedBinaryTreeAlgorithm;
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
@@ -47,6 +48,34 @@ public class Main
 //        doFindKPairsSmallestSumsAlgorithm();
 //        doSlidingWindowMedianAlgorithm();
 //        doTopKFrequentWordsAlgorithm();
+        doBalancBalancedBinaryTreeAlgorithm();
+    }
+
+    /**
+     * 110. Balanced Binary Tree
+     */
+    private static void doBalancBalancedBinaryTreeAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Balanced Binary tree practice!");
+        LOGGER.info("Starting Balanced Binary tree Algorithm...");
+        LOGGER.info("Balanced Binary tree Algorithm:");
+
+        BalancedBinaryTreeAlgorithm balancedBinaryTreeAlgorithm = new BalancedBinaryTreeAlgorithm();
+
+        boolean case1 = balancedBinaryTreeAlgorithm.isBalanced(BalancedBinaryTreeAlgorithmData.bbt_1);
+        LOGGER.info(RESULT, case1);
+        assertTrue(case1, "root = [3, 9, 20, null, null, 15, 7] is balanced");
+
+
+        boolean case2 = balancedBinaryTreeAlgorithm.isBalanced(BalancedBinaryTreeAlgorithmData.bbt_2);
+        LOGGER.info(RESULT, case2);
+        assertFalse(case2, "root = [1, 2, 2, 3, 3, null, null, 4, 4] isn't balanced");
+
+        boolean case3 = balancedBinaryTreeAlgorithm.isBalanced(BalancedBinaryTreeAlgorithmData.bbt_3);
+        LOGGER.info(RESULT, case3);
+        assertTrue(case3, "root = [] isn't balanced");
+
+        LOGGER.info("Ending Balanced Binary tree Algorithm...");
     }
 
     /**
