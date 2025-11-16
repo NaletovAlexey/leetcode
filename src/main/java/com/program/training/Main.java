@@ -1,6 +1,7 @@
 package com.program.training;
 
 import com.program.training.algorithm.balancedbinarytree.BalancedBinaryTreeAlgorithm;
+import com.program.training.algorithm.besttimetobuysell.BestTimeToBueAndSellStockAlgorithm;
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
@@ -48,13 +49,48 @@ public class Main
 //        doFindKPairsSmallestSumsAlgorithm();
 //        doSlidingWindowMedianAlgorithm();
 //        doTopKFrequentWordsAlgorithm();
-        doBalancBalancedBinaryTreeAlgorithm();
+//        doBalancBalancedBinaryTreeAlgorithm();
+        doBestTimeToBueAndSellStockAlgorithm();
+    }
+
+    /**
+     * 121. Best Time to Buy and Sell Stock
+     */
+    private static void doBestTimeToBueAndSellStockAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Best Time to Buy and Sell Stock practice!");
+        LOGGER.info("Starting Best Time to Buy and Sell Stock Algorithm...");
+        LOGGER.info("Best Time to Buy and Sell Stock Algorithm:");
+
+        BestTimeToBueAndSellStockAlgorithm bestTimeToBueAndSellStockAlgorithm = new BestTimeToBueAndSellStockAlgorithm();
+
+        int case1 = bestTimeToBueAndSellStockAlgorithm.maxProfit(BestTimeToBueAndSellStockAlgorithmData.prices_1);
+        LOGGER.info(RESULT, case1);
+        assertEquals(5, case1, "prices: [7, 1, 5, 3, 6, 4] - profit 5");
+
+        int case2 = bestTimeToBueAndSellStockAlgorithm.maxProfit(BestTimeToBueAndSellStockAlgorithmData.prices_2);
+        LOGGER.info(RESULT, case2);
+        assertEquals(0, case2, "prices: [7, 6, 4, 3, 1] - profit 0");
+
+        int case3 = bestTimeToBueAndSellStockAlgorithm.maxProfit(BestTimeToBueAndSellStockAlgorithmData.prices_3);
+        LOGGER.info(RESULT, case3);
+        assertEquals(1, case3, "prices: [1, 2] - profit 1");
+
+        int case4 = bestTimeToBueAndSellStockAlgorithm.maxProfit(BestTimeToBueAndSellStockAlgorithmData.prices_4);
+        LOGGER.info(RESULT, case4);
+        assertEquals(7, case4, "prices: [2, 9, 1, 7, 4] - profit 7");
+
+        int case5 = bestTimeToBueAndSellStockAlgorithm.maxProfit(BestTimeToBueAndSellStockAlgorithmData.prices_5);
+        LOGGER.info(RESULT, case5);
+        assertEquals(0, case5, "prices: [1] - profit 0");
+
+        LOGGER.info("Ending Best Time to Buy and Sell Stock Algorithm...");
     }
 
     /**
      * 110. Balanced Binary Tree
      */
-    private static void doBalancBalancedBinaryTreeAlgorithm()
+    private static void doBalancedBinaryTreeAlgorithm()
     {
         LOGGER.info("Hello and welcome to Balanced Binary tree practice!");
         LOGGER.info("Starting Balanced Binary tree Algorithm...");

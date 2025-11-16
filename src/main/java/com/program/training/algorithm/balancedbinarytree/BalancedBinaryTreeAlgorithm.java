@@ -1,8 +1,6 @@
 package com.program.training.algorithm.balancedbinarytree;
 
 import com.program.training.test.data.api.TreeNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Given a binary tree, determine if it is height-balanced
