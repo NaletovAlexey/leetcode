@@ -3,6 +3,7 @@ package com.program.training;
 import com.program.training.algorithm.balancedbinarytree.BalancedBinaryTreeAlgorithm;
 import com.program.training.algorithm.besttimetobuysell.BestTimeToBueAndSellStockAlgorithm;
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
+import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
@@ -49,8 +50,31 @@ public class Main
 //        doFindKPairsSmallestSumsAlgorithm();
 //        doSlidingWindowMedianAlgorithm();
 //        doTopKFrequentWordsAlgorithm();
-//        doBalancBalancedBinaryTreeAlgorithm();
-        doBestTimeToBueAndSellStockAlgorithm();
+//        doBalancedBinaryTreeAlgorithm();
+//        doBestTimeToBueAndSellStockAlgorithm();
+        doContainerWithMostWaterAlgorithm();
+    }
+
+    /**
+     * 11. Container With Most Water
+     */
+    private static void doContainerWithMostWaterAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Container With Most Water practice!");
+        LOGGER.info("Starting Container With Most Water Algorithm...");
+        LOGGER.info("Container With Most Water Algorithm:");
+
+        ContainerWithMostWaterAlgorithm containerWithMostWaterAlgorithm = new ContainerWithMostWaterAlgorithm();
+
+        int case1 = containerWithMostWaterAlgorithm.maxArea(ContainerWithMostWaterAlgorithmData.height_1);
+        assertEquals(49, case1, "prices: [1, 8, 6, 2, 5, 4, 8, 3, 7] - result 49");
+        LOGGER.info(RESULT, case1);
+
+        int case2 = containerWithMostWaterAlgorithm.maxArea(ContainerWithMostWaterAlgorithmData.height_2);
+        assertEquals(1, case2, "prices: [1, 1] - result 1");
+        LOGGER.info(RESULT, case2);
+
+        LOGGER.info("Ending Container With Most Water Algorithm...");
     }
 
     /**
