@@ -8,6 +8,7 @@ import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
 import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorithm;
+import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
@@ -52,7 +53,46 @@ public class Main
 //        doTopKFrequentWordsAlgorithm();
 //        doBalancedBinaryTreeAlgorithm();
 //        doBestTimeToBueAndSellStockAlgorithm();
-        doContainerWithMostWaterAlgorithm();
+//        doContainerWithMostWaterAlgorithm();
+        doPartitionLabelsAlgorithm();
+    }
+
+    /**
+     * 763. Partition Labels
+     */
+    private static void doPartitionLabelsAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Partition Labels practice!");
+        LOGGER.info("Starting Container With Partition Labels...");
+        LOGGER.info("Container With Partition Labels Algorithm:");
+
+        PartitionLabelsAlgorithm partitionLabelsAlgorithm = new PartitionLabelsAlgorithm();
+
+        List<Integer> case1 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_1);
+        assertEquals(3, case1.size(), "ababcbacadefegdehijhklij - size 3");
+        assertEquals("[9, 7, 8]", case1.toString(), "ababcbacadefegdehijhklij - [9, 7, 8]");
+
+        List<Integer> case2 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_2);
+        assertEquals(1, case2.size(), "eccbbbbdec - size 1");
+        assertEquals("[10]", case2.toString(), "eccbbbbdec - [10]");
+
+        List<Integer> case3 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_3);
+        assertEquals(1, case3.size(), "eeeeeeeeee - size 1");
+        assertEquals("[10]", case3.toString(), "eeeeeeeeee - [10]");
+
+        List<Integer> case4 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_4);
+        assertEquals(8, case4.size(), "abcdefgh - size 8");
+        assertEquals("[1, 1, 1, 1, 1, 1, 1, 1]", case4.toString(), "abcdefgh - [1, 1, 1, 1, 1, 1, 1, 1]");
+
+        List<Integer> case5 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_5);
+        assertEquals(1, case5.size(), "a - size 1");
+        assertEquals("[1]", case5.toString(), "a - [1]");
+
+        List<Integer> case6 = partitionLabelsAlgorithm.partitionLabels(PartitionLabelsAlgorithmData.s_6);
+        assertEquals(2, case6.size(), "eaaaabaaec - size 2");
+        assertEquals("[9, 1]", case6.toString(), "eaaaabaaec - [9, 1]");
+
+        LOGGER.info("Ending Container With Partition Labels Algorithm...");
     }
 
     /**
