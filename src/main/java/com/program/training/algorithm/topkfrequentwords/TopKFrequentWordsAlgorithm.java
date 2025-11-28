@@ -1,10 +1,6 @@
 package com.program.training.algorithm.topkfrequentwords;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Given an array of strings words and an integer k, return the k most frequent strings.

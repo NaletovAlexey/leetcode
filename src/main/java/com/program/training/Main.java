@@ -12,6 +12,7 @@ import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
+import com.program.training.algorithm.topkfrequentelements.TopKFrequentElementsAlgorithm;
 import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorithm;
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
 import com.program.training.algorithm.twonumbers.TwoNumbersAlgorithm;
@@ -54,7 +55,43 @@ public class Main
 //        doBalancedBinaryTreeAlgorithm();
 //        doBestTimeToBueAndSellStockAlgorithm();
 //        doContainerWithMostWaterAlgorithm();
-        doPartitionLabelsAlgorithm();
+//        doPartitionLabelsAlgorithm();
+        doTopKFrequentElementsAlgorithm();
+    }
+
+    /**
+     * 347. Top K Frequent Elements
+     */
+    private static void doTopKFrequentElementsAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Top K Frequent Elements Algorithm practice!");
+        LOGGER.info("Starting Top K Frequent Elements Algorithm...");
+        LOGGER.info("Top K Frequent Elements Algorithm:");
+
+        TopKFrequentElementsAlgorithm topKFrequentElementsAlgorithm = new TopKFrequentElementsAlgorithm();
+
+        int[] case1 = topKFrequentElementsAlgorithm.topKFrequent(TopKFrequentElementsAlgorithmData.elements_1,
+                TopKFrequentElementsAlgorithmData.k_1);
+
+        LOGGER.info(RESULT, case1);
+        assertEquals("[1, 2]", Arrays.stream(case1).mapToObj(String::valueOf).collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [1, 1, 1, 2, 2, 3], Output [1, 2]]");
+
+        int[] case2 = topKFrequentElementsAlgorithm.topKFrequent(TopKFrequentElementsAlgorithmData.elements_2,
+                TopKFrequentElementsAlgorithmData.k_2);
+
+        LOGGER.info(RESULT, case2);
+        assertEquals("[1]", Arrays.stream(case2).mapToObj(String::valueOf).collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [1], Output [1]]");
+
+        int[] case3 = topKFrequentElementsAlgorithm.topKFrequent(TopKFrequentElementsAlgorithmData.elements_3,
+                TopKFrequentElementsAlgorithmData.k_3);
+
+        LOGGER.info(RESULT, case3);
+        assertEquals("[1, 2]", Arrays.stream(case3).mapToObj(String::valueOf).collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [1, 2, 1, 2, 1, 2, 3, 1, 3, 2], Output [1, 2]");
+
+        LOGGER.info("Ending Top K Frequent Elements Algorithm...");
     }
 
     /**
