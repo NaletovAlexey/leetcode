@@ -5,9 +5,9 @@ package com.program.training.test.data;
  *
  * @author naletov
  */
-public final class BestTimeToBueAndSellStockAlgorithmData
+public final class BestTimeToBuyAndSellStockAlgorithmData
 {
-    private BestTimeToBueAndSellStockAlgorithmData()
+    private BestTimeToBuyAndSellStockAlgorithmData()
     {
         // do nothing
     }

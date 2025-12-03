@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author naletov
  */
-public class BestTimeToBueAndSellStockAlgorithm
+public class BestTimeToBuyAndSellStockAlgorithm
 {
-    private static final Logger LOGGER = LoggerFactory.getLogger(BestTimeToBueAndSellStockAlgorithm.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BestTimeToBuyAndSellStockAlgorithm.class);
 
     /**
      * Returns the maximum profit you can achieve from this transaction or 0 (not optimal)
