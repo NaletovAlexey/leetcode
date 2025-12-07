@@ -9,6 +9,7 @@ import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
 import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorithm;
+import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
@@ -58,7 +59,26 @@ public class Main
 //        doContainerWithMostWaterAlgorithm();
 //        doPartitionLabelsAlgorithm();
 //        doTopKFrequentElementsAlgorithm();
-        doBestTimeToBuyAndSellStockWithCooldownAlgorithm();
+//        doBestTimeToBuyAndSellStockWithCooldownAlgorithm();
+        doNumberOfIslandAlgorithm();
+    }
+
+    /**
+     * 200. Number of Islands
+     */
+    private static void doNumberOfIslandAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Number of Islands practice!");
+        LOGGER.info("Starting Number of Islands Algorithm...");
+        LOGGER.info("Number of Islands Algorithm:");
+
+        NumberOfIslandAlgorithm numberOfIslandAlgorithm = new NumberOfIslandAlgorithm();
+
+        assertEquals(1, numberOfIslandAlgorithm.numIslands(NumberOfIslandAlgorithmData.grid_1), "case 1 - 1 Island");
+        assertEquals(3, numberOfIslandAlgorithm.numIslands(NumberOfIslandAlgorithmData.grid_2), "case 2 - 3 Islands");
+
+
+        LOGGER.info("Ending Number of Islands Algorithm...");
     }
 
     /**
