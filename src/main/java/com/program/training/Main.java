@@ -9,6 +9,7 @@ import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
 import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorithm;
+import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm;
 import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
@@ -60,7 +61,42 @@ public class Main
 //        doPartitionLabelsAlgorithm();
 //        doTopKFrequentElementsAlgorithm();
 //        doBestTimeToBuyAndSellStockWithCooldownAlgorithm();
-        doNumberOfIslandAlgorithm();
+//        doNumberOfIslandAlgorithm();
+        doMergeSortedArrayAlgorithm();
+    }
+
+    /**
+     * 88. Merge Sorted Array
+     */
+    private static void doMergeSortedArrayAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Merge Sorted Array practice!");
+        LOGGER.info("Starting Merge Sorted Array Algorithm...");
+        LOGGER.info("Merge Sorted Arraynds Algorithm:");
+
+        MergeSortedArrayAlgorithm mergeSortedArrayAlgorithm = new MergeSortedArrayAlgorithm();
+
+        mergeSortedArrayAlgorithm.merge(MergeSortedArrayAlgorithmData.nums_1_1, MergeSortedArrayAlgorithmData.m_1,
+                MergeSortedArrayAlgorithmData.nums_1_2, MergeSortedArrayAlgorithmData.n_1);
+
+        assertEquals("[1, 2, 2, 3, 5, 6]", Arrays.toString(MergeSortedArrayAlgorithmData.nums_1_1), "Output: [1, 2, 2, 3, 5, 6]");
+
+        mergeSortedArrayAlgorithm.merge(MergeSortedArrayAlgorithmData.nums_2_1, MergeSortedArrayAlgorithmData.m_2,
+                MergeSortedArrayAlgorithmData.nums_2_2, MergeSortedArrayAlgorithmData.n_2);
+
+        assertEquals("[1]", Arrays.toString(MergeSortedArrayAlgorithmData.nums_2_1), "Output: [1]");
+
+        mergeSortedArrayAlgorithm.merge(MergeSortedArrayAlgorithmData.nums_3_1, MergeSortedArrayAlgorithmData.m_3,
+                MergeSortedArrayAlgorithmData.nums_3_2, MergeSortedArrayAlgorithmData.n_3);
+
+        assertEquals("[1]", Arrays.toString(MergeSortedArrayAlgorithmData.nums_3_1), "Output: [1]");
+
+        mergeSortedArrayAlgorithm.merge(MergeSortedArrayAlgorithmData.nums_4_1, MergeSortedArrayAlgorithmData.m_4,
+                MergeSortedArrayAlgorithmData.nums_4_2, MergeSortedArrayAlgorithmData.n_4);
+
+        assertEquals("[1, 2, 2, 3, 5, 6]", Arrays.toString(MergeSortedArrayAlgorithmData.nums_4_1), "Output: [1, 2, 2, 3, 5, 6]");
+
+        LOGGER.info("Ending Merge Sorted Array Algorithm...");
     }
 
     /**
