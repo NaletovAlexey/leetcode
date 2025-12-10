@@ -19,6 +19,7 @@ import com.program.training.algorithm.topkfrequentelements.TopKFrequentElementsA
 import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorithm;
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
 import com.program.training.algorithm.twonumbers.TwoNumbersAlgorithm;
+import com.program.training.algorithm.twosumiv.TwoSumIVAlgorithm;
 import com.program.training.test.data.*;
 import com.program.training.test.data.api.ListNode;
 import org.slf4j.Logger;
@@ -62,7 +63,34 @@ public class Main
 //        doTopKFrequentElementsAlgorithm();
 //        doBestTimeToBuyAndSellStockWithCooldownAlgorithm();
 //        doNumberOfIslandAlgorithm();
-        doMergeSortedArrayAlgorithm();
+//        doMergeSortedArrayAlgorithm();
+        doTwoSumIVAlgorithm();
+    }
+
+    /**
+     * 653. Two Sum IV - Input is a BST
+     */
+    private static void doTwoSumIVAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Two Sum IV practice!");
+        LOGGER.info("Starting Two Sum IV Algorithm...");
+        LOGGER.info("Two Sum IV Algorithm:");
+
+        TwoSumIVAlgorithm twoSumIVAlgorithm = new TwoSumIVAlgorithm();
+
+        boolean case1 = twoSumIVAlgorithm.findTarget(TwoSumIVAlgorithmData.root_1, TwoSumIVAlgorithmData.k_1);
+        LOGGER.info(RESULT, case1);
+        assertTrue(case1, "root = [5, 3, 6, 2, 4, null, 7], k = 9");
+
+        boolean case2 = twoSumIVAlgorithm.findTarget(TwoSumIVAlgorithmData.root_2, TwoSumIVAlgorithmData.k_2);
+        LOGGER.info(RESULT, case2);
+        assertFalse(case2, "root = [5, 3, 6, 2, 4, null, 7], k = 28");
+
+        boolean case3 = twoSumIVAlgorithm.findTarget(TwoSumIVAlgorithmData.root_3, TwoSumIVAlgorithmData.k_3);
+        LOGGER.info(RESULT, case3);
+        assertTrue(case3, "root = [5, 2, 6, 1, null, null, 8], k = 9");
+
+        LOGGER.info("Ending Two Sum IV Algorithm...");
     }
 
     /**
