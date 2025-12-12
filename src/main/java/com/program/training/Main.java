@@ -15,6 +15,7 @@ import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
+import com.program.training.algorithm.symmetrictree.SymmetricTreeAlgorithm;
 import com.program.training.algorithm.topkfrequentelements.TopKFrequentElementsAlgorithm;
 import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorithm;
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
@@ -64,7 +65,38 @@ public class Main
 //        doBestTimeToBuyAndSellStockWithCooldownAlgorithm();
 //        doNumberOfIslandAlgorithm();
 //        doMergeSortedArrayAlgorithm();
-        doTwoSumIVAlgorithm();
+//        doTwoSumIVAlgorithm();
+        doSymmetricTreeAlgorithm();
+    }
+
+    /**
+     * 101. Symmetric Tree
+     */
+    private static void doSymmetricTreeAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Symmetric Tree practice!");
+        LOGGER.info("Starting Symmetric Tree Algorithm...");
+        LOGGER.info("Symmetric Tree Algorithm:");
+
+        SymmetricTreeAlgorithm symmetricTreeAlgorithm = new SymmetricTreeAlgorithm();
+
+        boolean case1 = symmetricTreeAlgorithm.isSymmetric(SymmetricTreeAlgorithmData.root_1);
+        LOGGER.info(RESULT, case1);
+        assertTrue(case1, "root = [1, 2, 2, 3, 4, 4, 3]");
+
+        boolean case2 = symmetricTreeAlgorithm.isSymmetric(SymmetricTreeAlgorithmData.root_2);
+        LOGGER.info(RESULT, case2);
+        assertFalse(case2, "root = [1, 2, 2, null, 3, null, 3]");
+
+        boolean case3 = symmetricTreeAlgorithm.isSymmetric(SymmetricTreeAlgorithmData.root_3);
+        LOGGER.info(RESULT, case3);
+        assertFalse(case3, "root = [5, 2, 2, 4, null, null, 1, null, 1, null, 4, 2, null, 2, null]");
+
+        boolean case4 = symmetricTreeAlgorithm.isSymmetric(SymmetricTreeAlgorithmData.root_4);
+        LOGGER.info(RESULT, case4);
+        assertFalse(case4, "root = [[2, 3, 3, 4, 5, 5]");
+
+        LOGGER.info("Ending Symmetric Tree Algorithm...");
     }
 
     /**

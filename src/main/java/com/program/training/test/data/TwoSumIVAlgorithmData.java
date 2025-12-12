@@ -3,7 +3,7 @@ package com.program.training.test.data;
 import com.program.training.test.data.api.TreeNode;
 
 /**
- * Class with test data for the  Two Sum IV algorithm
+ * Class with test data for the Two Sum IV algorithm
  *
  * @author naletov
  */
