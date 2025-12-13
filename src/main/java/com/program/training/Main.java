@@ -21,6 +21,7 @@ import com.program.training.algorithm.topkfrequentwords.TopKFrequentWordsAlgorit
 import com.program.training.algorithm.triangle.TriangleAlgorithm;
 import com.program.training.algorithm.twonumbers.TwoNumbersAlgorithm;
 import com.program.training.algorithm.twosumiv.TwoSumIVAlgorithm;
+import com.program.training.algorithm.validanagram.ValidAnagramAlgorithm;
 import com.program.training.test.data.*;
 import com.program.training.test.data.api.ListNode;
 import org.slf4j.Logger;
@@ -66,7 +67,34 @@ public class Main
 //        doNumberOfIslandAlgorithm();
 //        doMergeSortedArrayAlgorithm();
 //        doTwoSumIVAlgorithm();
-        doSymmetricTreeAlgorithm();
+//        doSymmetricTreeAlgorithm();
+        doValidAnagramAlgorithm();
+    }
+
+    /**
+     * 242. Valid Anagram
+     */
+    private static void doValidAnagramAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Valid Anagram practice!");
+        LOGGER.info("Starting Valid Anagram Algorithm...");
+        LOGGER.info("Valid Anagram Algorithm:");
+
+        ValidAnagramAlgorithm validAnagramAlgorithm = new ValidAnagramAlgorithm();
+
+        boolean case1 = validAnagramAlgorithm.isAnagram(ValidAnagramAlgorithmData.s_1, ValidAnagramAlgorithmData.t_1);
+        LOGGER.info(RESULT, case1);
+        assertTrue(case1, "anagram and nagaram");
+
+        boolean case2 = validAnagramAlgorithm.isAnagram(ValidAnagramAlgorithmData.s_2, ValidAnagramAlgorithmData.t_2);
+        LOGGER.info(RESULT, case2);
+        assertFalse(case2, "rat and car");
+
+        boolean case3 = validAnagramAlgorithm.isAnagram(ValidAnagramAlgorithmData.s_3, ValidAnagramAlgorithmData.t_3);
+        LOGGER.info(RESULT, case3);
+        assertFalse(case3, "aabb and abcc");
+
+        LOGGER.info("Ending Valid Anagram Algorithm...");
     }
 
     /**
