@@ -12,6 +12,7 @@ import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorit
 import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm;
 import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
+import com.program.training.algorithm.printinorder.PrintInOrderAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
@@ -68,7 +69,135 @@ public class Main
 //        doMergeSortedArrayAlgorithm();
 //        doTwoSumIVAlgorithm();
 //        doSymmetricTreeAlgorithm();
-        doValidAnagramAlgorithm();
+//        doValidAnagramAlgorithm();
+        doPrintInOrderAlgorithm();
+    }
+
+    /**
+     * 1114. Print in Order
+     */
+    private static void doPrintInOrderAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Print in Order practice!");
+        LOGGER.info("Starting Print in Order Algorithm...");
+        LOGGER.info("Print in Order Algorithm:");
+
+        // 1 -> 2 -> 3
+        PrintInOrderAlgorithmData.setOutput("");
+        PrintInOrderAlgorithm printInOrderAlgorithm = new PrintInOrderAlgorithm();
+
+        Thread t1_1 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.first(PrintInOrderAlgorithmData.printFirst());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        Thread t2_1 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.second(PrintInOrderAlgorithmData.printSecond());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        Thread t3_1 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.third(PrintInOrderAlgorithmData.printThird());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        t1_1.start();
+        t2_1.start();
+        t3_1.start();
+        // wait main Thread
+        try
+        {
+            t1_1.join();
+            t2_1.join();
+            t3_1.join();
+        }
+        catch (InterruptedException e)
+        {
+            LOGGER.warn("Interrupted!");
+            Thread.currentThread().interrupt();
+        }
+
+        LOGGER.info(RESULT, PrintInOrderAlgorithmData.getOutput());
+        assertEquals(PrintInOrderAlgorithmData.RESULT, PrintInOrderAlgorithmData.getOutput(),
+                "Result must be: firstsecondthird");
+
+        // 1 -> 3 -> 2
+        PrintInOrderAlgorithmData.setOutput("");
+        printInOrderAlgorithm.setFirstDone(false);
+        printInOrderAlgorithm.setSecondDone(false);
+
+        Thread t1_2 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.first(PrintInOrderAlgorithmData.printFirst());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        Thread t2_2 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.third(PrintInOrderAlgorithmData.printThird());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        Thread t3_2 = new Thread(() -> {
+            try
+            {
+                printInOrderAlgorithm.second(PrintInOrderAlgorithmData.printSecond());
+            } catch (InterruptedException e)
+            {
+                LOGGER.warn("Interrupted!");
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        t1_2.start();
+        t2_2.start();
+        t3_2.start();
+        // wait main Thread
+        try
+        {
+            t1_2.join();
+            t2_2.join();
+            t3_2.join();
+        }
+        catch (InterruptedException e)
+        {
+            LOGGER.warn("Interrupted!");
+            Thread.currentThread().interrupt();
+        }
+
+        LOGGER.info(RESULT, PrintInOrderAlgorithmData.getOutput());
+        assertEquals(PrintInOrderAlgorithmData.RESULT, PrintInOrderAlgorithmData.getOutput(),
+                "Result must be: firstsecondthird");
+
+        LOGGER.info("Ending Print in Order Algorithm...");
     }
 
     /**
