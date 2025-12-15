@@ -7,6 +7,7 @@ import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
+import com.program.training.algorithm.jumpgame.JumpGameAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
 import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorithm;
 import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm;
@@ -70,7 +71,32 @@ public class Main
 //        doTwoSumIVAlgorithm();
 //        doSymmetricTreeAlgorithm();
 //        doValidAnagramAlgorithm();
-        doPrintInOrderAlgorithm();
+//        doPrintInOrderAlgorithm();
+        doJumpGameAlgorithm();
+    }
+
+    /**
+     * 55. Jump Game
+     */
+    private static void doJumpGameAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Jump Game practice!");
+        LOGGER.info("Starting Jump Game Algorithm...");
+        LOGGER.info("Jump Game Algorithm:");
+
+        JumpGameAlgorithm jumpGameAlgorithm = new JumpGameAlgorithm();
+
+        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_1), "[2,3,1,1,4]: true");
+
+        assertFalse(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_2), "[3,2,1,0,4]: false");
+
+        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_3), "[0]: true");
+
+        assertFalse(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_4), "[0, 2, 3]: false");
+
+        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_5), "[3, 0, 8, 2, 0, 0, 1]: true");
+
+        LOGGER.info("Ending Jump Game Algorithm...");
     }
 
     /**
