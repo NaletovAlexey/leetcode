@@ -45,16 +45,23 @@ public class JumpGameIIAlgorithm
         {
             maxReachable = Math.max(maxReachable, i + nums[i]);
 
-            if (currentJump == i) {
+            // if (currentJump == 0)
+             if (currentJump == i)
+             {
                 // new jump
                 steps++;
-                currentJump = maxReachable;  // max position
+                //currentJump = maxReachable - i - 1;  // max position
+                currentJump = maxReachable;
                 LOGGER.info("Current Step and Jump: [{}, {}]", i, nums[i]);
                 if (maxReachable >= nums.length - 1)
                 {
                     return steps;
                 }
             }
+//            else
+//            {
+//                currentJump--;
+//            }
         }
         return steps;
     }
