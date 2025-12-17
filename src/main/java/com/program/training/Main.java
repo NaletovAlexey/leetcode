@@ -15,6 +15,7 @@ import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm
 import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.printinorder.PrintInOrderAlgorithm;
+import com.program.training.algorithm.search2dmatris.Search2DMatrixAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
@@ -74,7 +75,40 @@ public class Main
 //        doValidAnagramAlgorithm();
 //        doPrintInOrderAlgorithm();
 //        doJumpGameAlgorithm();
-        doJumpGameIIAlgorithm();
+//        doJumpGameIIAlgorithm();
+        doSearch2DMatrixAlgorithm();
+    }
+
+    /**
+     * 74. Search a 2D Matrix
+     */
+    private static void doSearch2DMatrixAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Search a 2D Matrix practice!");
+        LOGGER.info("Starting Search a 2D Matrix Algorithm...");
+        LOGGER.info("Search a 2D Matrix Algorithm:");
+
+        Search2DMatrixAlgorithm search2DMatrixAlgorithm = new Search2DMatrixAlgorithm();
+
+        assertTrue(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_1, Search2DMatrixAlgorithmData.target_1),
+                "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3 -> true");
+
+        assertFalse(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_1, Search2DMatrixAlgorithmData.target_2),
+                "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13 -> true");
+
+        assertFalse(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_3, Search2DMatrixAlgorithmData.target_3),
+                "matrix = [[1]], target = 0 -> false");
+
+        assertTrue(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_4, Search2DMatrixAlgorithmData.target_4),
+                "matrix = [[1]], target = 1 -> true");
+
+        assertFalse(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_5, Search2DMatrixAlgorithmData.target_5),
+                "matrix = [[1]], target = 1 -> false");
+
+        assertTrue(search2DMatrixAlgorithm.searchMatrix(Search2DMatrixAlgorithmData.matrix_6, Search2DMatrixAlgorithmData.target_6),
+                "matrix = [[1, 3]], target = 3 -> true");
+
+        LOGGER.info("Search a 2D Matrix Algorithm...");
     }
 
     /**
@@ -84,6 +118,7 @@ public class Main
     {
         LOGGER.info("Hello and welcome to Jump Game II practice!");
         LOGGER.info("Starting Jump Game II Algorithm...");
+        LOGGER.info("Jump Game II Algorithm:");
 
         JumpGameIIAlgorithm jumpGameIIAlgorithm = new JumpGameIIAlgorithm();
 

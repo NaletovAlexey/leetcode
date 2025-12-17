@@ -79,7 +79,7 @@ public class BinarySearchAlgorithm
             {
                 lowIndex = midIndex + 1;
             }
-            else // // target < nums[midIndex]
+            else // target < nums[midIndex]
             {
                 highIndex = midIndex - 1;
             }
