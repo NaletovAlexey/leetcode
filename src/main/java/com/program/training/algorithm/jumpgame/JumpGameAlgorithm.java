@@ -19,8 +19,13 @@ public class JumpGameAlgorithm
 {
  private static final Logger LOGGER = LoggerFactory.getLogger(JumpGameAlgorithm.class);
 
-
-    public boolean canJump(int[] nums) {
+    /**
+     * Returns if it's possible to reach n-1
+     * @param nums array of steps
+     * @return true if posiable
+     */
+    public boolean canJump(int[] nums)
+    {
 
         if (nums.length == 1)
         {

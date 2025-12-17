@@ -8,6 +8,7 @@ import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWa
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.jumpgame.JumpGameAlgorithm;
+import com.program.training.algorithm.jumpgame.JumpGameIIAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
 import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorithm;
 import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm;
@@ -72,7 +73,60 @@ public class Main
 //        doSymmetricTreeAlgorithm();
 //        doValidAnagramAlgorithm();
 //        doPrintInOrderAlgorithm();
-        doJumpGameAlgorithm();
+//        doJumpGameAlgorithm();
+        doJumpGameIIAlgorithm();
+    }
+
+    /**
+     * 45. Jump Game II
+     */
+    private static void doJumpGameIIAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Jump Game II practice!");
+        LOGGER.info("Starting Jump Game II Algorithm...");
+
+        JumpGameIIAlgorithm jumpGameIIAlgorithm = new JumpGameIIAlgorithm();
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_1), "[2, 3, 1, 1, 4]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(0, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_3), "[0]: 0");
+        LOGGER.info(RESULT, 0);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_5), "[3, 0, 8, 2, 0, 0, 1]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_6), "[2, 3, 0, 1, 4]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_7), "[2, 4, 2, 1, 1, 1]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_8), "[2, 3, 3, 1, 1, 1]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(1, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_9), "[1, 2]: 1");
+        LOGGER.info(RESULT, 1);
+
+        assertEquals(1, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_10), "[2, 3, 1]: 1");
+        LOGGER.info(RESULT, 1);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_11), "[1, 2, 3, 4]: 2");
+        LOGGER.info(RESULT, 2);     LOGGER.info("Jump Game II Algorithm:");
+
+        assertEquals(3, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_12), "[3, 4, 3, 2, 5, 4, 3]: 3");
+        LOGGER.info(RESULT, 3);
+
+        assertEquals(3, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_13), "[3, 4, 3, 1, 0, 7, 0, 3, 0, 2, 0, 3]: 3");
+        LOGGER.info(RESULT, 3);
+
+        assertEquals(2, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_14), "[1, 2, 3]: 2");
+        LOGGER.info(RESULT, 2);
+
+        assertEquals(3, jumpGameIIAlgorithm.jump(JumpGameAlgorithmData.nums_15), "[1, 2, 1, 1, 1]: 3");
+        LOGGER.info(RESULT, 3);
+
+        LOGGER.info("Ending Jump Game II Algorithm...");
     }
 
     /**
@@ -86,15 +140,17 @@ public class Main
 
         JumpGameAlgorithm jumpGameAlgorithm = new JumpGameAlgorithm();
 
-        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_1), "[2,3,1,1,4]: true");
+        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_1), "[2, 3, 1, 1, 4]: true");
 
-        assertFalse(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_2), "[3,2,1,0,4]: false");
+        assertFalse(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_2), "[3, 2, 1, 0, 4]: false");
 
         assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_3), "[0]: true");
 
         assertFalse(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_4), "[0, 2, 3]: false");
 
         assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_5), "[3, 0, 8, 2, 0, 0, 1]: true");
+
+        assertTrue(jumpGameAlgorithm.canJump(JumpGameAlgorithmData.nums_6), "[2, 3, 0, 1, 4]: true");
 
         LOGGER.info("Ending Jump Game Algorithm...");
     }
