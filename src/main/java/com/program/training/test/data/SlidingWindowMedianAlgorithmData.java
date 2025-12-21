@@ -23,4 +23,7 @@ public final class SlidingWindowMedianAlgorithmData
     public static int[] nums_5 = {-2147483648, -2147483648, 2147483647, -2147483648, -2147483648, -2147483648,
             2147483647, 2147483647, 2147483647, 2147483647, -2147483648, 2147483647, -2147483648};
     public static int k_5 = 2;
+
+    public static int[] nums_6 = {1};
+    public static int k_6 = 1;
 }

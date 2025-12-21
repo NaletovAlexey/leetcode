@@ -18,6 +18,7 @@ import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.printinorder.PrintInOrderAlgorithm;
 import com.program.training.algorithm.search2dmatris.Search2DMatrixAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
+import com.program.training.algorithm.slidingwindowmaximum.SlidingWindowMaximumAlgorithm;
 import com.program.training.algorithm.slidingwindowmedian.SlidingWindowMedianAlgorithm;
 import com.program.training.algorithm.smallestsumspairs.FindKPairsSmallestSumsAlgorithm;
 import com.program.training.algorithm.symmetrictree.SymmetricTreeAlgorithm;
@@ -78,7 +79,72 @@ public class Main
 //        doJumpGameAlgorithm();
 //        doJumpGameIIAlgorithm();
 //        doSearch2DMatrixAlgorithm();
-          doBestTimeToBuyAndSellStockIIAlgorithm();
+//          doBestTimeToBuyAndSellStockIIAlgorithm();
+        doSlidingWindowMaximumAlgorithm();
+    }
+
+    /**
+     * 239. Sliding Window Maximum
+     */
+    private static void doSlidingWindowMaximumAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Sliding Window Maximum practice!");
+        LOGGER.info("Starting Sliding Window Maximum Algorithm...");
+        LOGGER.info("Sliding Window Maximum Algorithm:");
+
+        SlidingWindowMaximumAlgorithm slidingWindowMaximumAlgorithm = new SlidingWindowMaximumAlgorithm();
+
+        int[] case1 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_1,
+                SlidingWindowMedianAlgorithmData.k_1);
+        LOGGER.info(RESULT, case1);
+
+        assertEquals("[3, 3, 5, 5, 6, 7]", Arrays.stream(case1).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [3, 3, 5, 5, 6, 7]");
+
+        int[] case2 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_6,
+                SlidingWindowMedianAlgorithmData.k_6);
+        LOGGER.info(RESULT, case2);
+
+        assertEquals("[1]", Arrays.stream(case2).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [1]");
+
+        int[] case3 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_2,
+                SlidingWindowMedianAlgorithmData.k_2);
+        LOGGER.info(RESULT, case3);
+
+        assertEquals("[3, 4, 4, 4, 3, 4, 4]", Arrays.stream(case3).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [3, 4, 4, 4, 3, 4, 4]");
+
+        int[] case4 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_3,
+                SlidingWindowMedianAlgorithmData.k_3);
+        LOGGER.info(RESULT, case4);
+
+        assertEquals("[2147483647]", Arrays.stream(case4).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [2147483647]");
+
+        int[] case5 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_4,
+                SlidingWindowMedianAlgorithmData.k_4);
+        LOGGER.info(RESULT, case5);
+
+        assertEquals("[4]", Arrays.stream(case5).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [4]");
+
+        int[] case6 = slidingWindowMaximumAlgorithm.maxSlidingWindow(SlidingWindowMedianAlgorithmData.nums_5,
+                SlidingWindowMedianAlgorithmData.k_5);
+        LOGGER.info(RESULT, case6);
+
+        assertEquals("[-2147483648, 2147483647, 2147483647, -2147483648," +
+                        " -2147483648, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647]", Arrays.stream(case6).mapToObj(String::valueOf)
+                        .collect(Collectors.joining(", ", "[", "]")),
+                "The sequence: [-2147483648, 2147483647, 2147483647, " +
+                        "-2147483648, -2147483648, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647, 2147483647]");
+
+        LOGGER.info("Ending Sliding Window Maximum...");
     }
 
     /**
