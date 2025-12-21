@@ -2,6 +2,7 @@ package com.program.training;
 
 import com.program.training.algorithm.balancedbinarytree.BalancedBinaryTreeAlgorithm;
 import com.program.training.algorithm.besttimetobuysell.BestTimeToBuyAndSellStockAlgorithm;
+import com.program.training.algorithm.besttimetobuysell.BestTimeToBuyAndSellStockIIAlgorithm;
 import com.program.training.algorithm.besttimetobuysellwithcooldown.BestTimeToBuyAndSellStockWithCooldownAlgorithm;
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
@@ -76,7 +77,38 @@ public class Main
 //        doPrintInOrderAlgorithm();
 //        doJumpGameAlgorithm();
 //        doJumpGameIIAlgorithm();
-        doSearch2DMatrixAlgorithm();
+//        doSearch2DMatrixAlgorithm();
+          doBestTimeToBuyAndSellStockIIAlgorithm();
+    }
+
+    /**
+     * 122. Best Time to Buy and Sell Stock II
+     */
+    private static void doBestTimeToBuyAndSellStockIIAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Best Time to Buy and Sell Stock II practice!");
+        LOGGER.info("Starting Best Time to Buy and Sell Stock II Algorithm...");
+        LOGGER.info("Best Time to Buy and Sell Stock II Algorithm:");
+
+        BestTimeToBuyAndSellStockIIAlgorithm bestTimeToBuyAndSellStockIIAlgorithm = new BestTimeToBuyAndSellStockIIAlgorithm();
+
+        int case1 = bestTimeToBuyAndSellStockIIAlgorithm.maxProfit(BestTimeToBuyAndSellStockAlgorithmData.prices_1);
+        LOGGER.info(RESULT, case1);
+        assertEquals(7, case1, "prices: [7, 1, 5, 3, 6, 4] - Total profit 7");
+
+        int case6 = bestTimeToBuyAndSellStockIIAlgorithm.maxProfit(BestTimeToBuyAndSellStockAlgorithmData.prices_6);
+        LOGGER.info(RESULT, case6);
+        assertEquals(4, case6, "prices: [1, 2, 3, 4, 5] - profit 4");
+
+        int case2 = bestTimeToBuyAndSellStockIIAlgorithm.maxProfit(BestTimeToBuyAndSellStockAlgorithmData.prices_2);
+        LOGGER.info(RESULT, case2);
+        assertEquals(0, case2, "prices: [7, 6, 4, 3, 1] - Total profit 0");
+
+        int case3 = bestTimeToBuyAndSellStockIIAlgorithm.maxProfit(BestTimeToBuyAndSellStockAlgorithmData.prices_3);
+        LOGGER.info(RESULT, case3);
+        assertEquals(1, case3, "prices: [1, 2] - profit 1");
+
+        LOGGER.info("Ending Best Time to Buy and Sell Stock II Algorithm...");
     }
 
     /**

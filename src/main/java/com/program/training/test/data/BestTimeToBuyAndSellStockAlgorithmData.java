@@ -17,4 +17,5 @@ public final class BestTimeToBuyAndSellStockAlgorithmData
     public static int[] prices_3 = {1, 2};
     public static int[] prices_4 = {2, 9, 1, 7, 4};
     public static int[] prices_5 = {2};
+    public static int[] prices_6 = {1, 2, 3, 4, 5};
 }
