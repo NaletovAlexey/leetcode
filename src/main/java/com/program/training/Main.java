@@ -8,6 +8,7 @@ import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
+import com.program.training.algorithm.insertdeletegetrandom.RandomizedSet;
 import com.program.training.algorithm.jumpgame.JumpGameAlgorithm;
 import com.program.training.algorithm.jumpgame.JumpGameIIAlgorithm;
 import com.program.training.algorithm.mergeintervals.MergeIntervalsAlgorithm;
@@ -80,7 +81,30 @@ public class Main
 //        doJumpGameIIAlgorithm();
 //        doSearch2DMatrixAlgorithm();
 //          doBestTimeToBuyAndSellStockIIAlgorithm();
-        doSlidingWindowMaximumAlgorithm();
+//        doSlidingWindowMaximumAlgorithm();
+        doInsertDeleteGetRandomAlgorithm();
+    }
+
+    /**
+     * 380. Insert Delete GetRandom O(1)
+     */
+    private static void doInsertDeleteGetRandomAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Insert Delete GetRandom O(1) practice!");
+        LOGGER.info("Starting Insert Delete GetRandom O(1) Algorithm...");
+        LOGGER.info("Insert Delete GetRandom O(1) Algorithm:");
+
+        RandomizedSet randomizedSet = new RandomizedSet();
+
+        assertTrue(randomizedSet.insert(1), "insert 1");
+        assertFalse(randomizedSet.remove(2), "remove 2");
+        assertTrue(randomizedSet.insert(2), "insert 2");
+        assertTrue(randomizedSet.getRandom() == 1 || randomizedSet.getRandom() == 2, "getRandom (1 or 2)");
+        assertTrue(randomizedSet.remove(1), "remove 1");
+        assertFalse(randomizedSet.insert(2), "insert 2");
+        assertEquals(2, randomizedSet.getRandom(), "getRandom (2)");
+
+        LOGGER.info("Ending Insert Delete GetRandom O(1)...");
     }
 
     /**
