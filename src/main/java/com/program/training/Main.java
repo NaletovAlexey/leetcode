@@ -6,6 +6,7 @@ import com.program.training.algorithm.besttimetobuysell.BestTimeToBuyAndSellStoc
 import com.program.training.algorithm.besttimetobuysellwithcooldown.BestTimeToBuyAndSellStockWithCooldownAlgorithm;
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
+import com.program.training.algorithm.countcoveredbuildings.partitionlabels.CountCoveredBuildingsAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.insertdeletegetrandom.RandomizedSet;
@@ -82,7 +83,34 @@ public class Main
 //        doSearch2DMatrixAlgorithm();
 //          doBestTimeToBuyAndSellStockIIAlgorithm();
 //        doSlidingWindowMaximumAlgorithm();
-        doInsertDeleteGetRandomAlgorithm();
+//        doInsertDeleteGetRandomAlgorithm();
+        doCountCoveredBuildingsAlgorithm();
+    }
+
+    /**
+     * 3531. Count Covered Buildings
+     */
+    private static void doCountCoveredBuildingsAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Count Covered Buildings practice!");
+        LOGGER.info("Starting Count Covered Buildings Algorithm...");
+        LOGGER.info("Insert Count Covered Buildings Algorithm:");
+
+        CountCoveredBuildingsAlgorithm countCoveredBuildingsAlgorithm = new CountCoveredBuildingsAlgorithm();
+
+        assertEquals(1, countCoveredBuildingsAlgorithm.countCoveredBuildings(CountCoveredBuildingsAlgorithmData.n_1,
+                        CountCoveredBuildingsAlgorithmData.buildings_1),
+                "Input: n = 3, buildings = [[1,2],[2,2],[3,2],[2,1],[2,3]]");
+
+        assertEquals(0, countCoveredBuildingsAlgorithm.countCoveredBuildings(CountCoveredBuildingsAlgorithmData.n_2,
+                        CountCoveredBuildingsAlgorithmData.buildings_2),
+                "Input: n = 3, buildings = [[1,1],[1,2],[2,1],[2,2]]");
+
+        assertEquals(1, countCoveredBuildingsAlgorithm.countCoveredBuildings(CountCoveredBuildingsAlgorithmData.n_3,
+                        CountCoveredBuildingsAlgorithmData.buildings_3),
+                "Input: n = 5, buildings = [[1,3],[3,2],[3,3],[3,5],[5,3]]");
+
+        LOGGER.info("Ending Count Covered Buildings...");
     }
 
     /**
