@@ -18,6 +18,7 @@ import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm
 import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
 import com.program.training.algorithm.printinorder.PrintInOrderAlgorithm;
+import com.program.training.algorithm.reverselinkedlist.ReverseLinkedListAlgorithm;
 import com.program.training.algorithm.search2dmatris.Search2DMatrixAlgorithm;
 import com.program.training.algorithm.singlenumber.SingleNumberAlgorithm;
 import com.program.training.algorithm.slidingwindowmaximum.SlidingWindowMaximumAlgorithm;
@@ -84,8 +85,33 @@ public class Main
 //          doBestTimeToBuyAndSellStockIIAlgorithm();
 //        doSlidingWindowMaximumAlgorithm();
 //        doInsertDeleteGetRandomAlgorithm();
-        doCountCoveredBuildingsAlgorithm();
+//        doCountCoveredBuildingsAlgorithm();
+        doReverseLinkedListAlgorithm();
     }
+
+    /**
+     * 206. Reverse Linked List
+     */
+    private static void doReverseLinkedListAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Reverse Linked List practice!");
+        LOGGER.info("Starting Reverse Linked List Algorithm...");
+        LOGGER.info("Insert Reverse Linked List Algorithm:");
+
+        ReverseLinkedListAlgorithm reverseLinkedListAlgorithm = new ReverseLinkedListAlgorithm();
+
+        ListNode case1 = reverseLinkedListAlgorithm.reverseList(ReverseLinledListAlgorithmData.head_1);
+        assertEquals(case1.toString(), ReverseLinledListAlgorithmData.Output_1.toString(), "Output: [5,4,3,2,1]");
+
+        ListNode case2 = reverseLinkedListAlgorithm.reverseList(ReverseLinledListAlgorithmData.head_2);
+        assertEquals(case2.toString(), ReverseLinledListAlgorithmData.Output_2.toString(), "Output: [2,1]");
+
+        ListNode case3 = reverseLinkedListAlgorithm.reverseList(null);
+        assertEquals(case3, null, "Output: []");
+
+        LOGGER.info("Ending Reverse Linked List...");
+    }
+
 
     /**
      * 3531. Count Covered Buildings
