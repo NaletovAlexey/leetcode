@@ -3,8 +3,6 @@ package com.program.training.algorithm.binarysearch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
-
 /**
  * Given an array of integers nums which is sorted in ascending order,
  * and an integer target, write a function to search target in nums.

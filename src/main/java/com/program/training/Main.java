@@ -17,6 +17,7 @@ import com.program.training.algorithm.mergeksortedlists.MergeKSortedListsAlgorit
 import com.program.training.algorithm.mergesortedarray.MergeSortedArrayAlgorithm;
 import com.program.training.algorithm.numberofisland.NumberOfIslandAlgorithm;
 import com.program.training.algorithm.partitionlabels.PartitionLabelsAlgorithm;
+import com.program.training.algorithm.pathsumii.PathSumIIAlgorithm;
 import com.program.training.algorithm.printinorder.PrintInOrderAlgorithm;
 import com.program.training.algorithm.reverselinkedlist.ReverseLinkedListAlgorithm;
 import com.program.training.algorithm.search2dmatris.Search2DMatrixAlgorithm;
@@ -36,6 +37,7 @@ import com.program.training.test.data.api.ListNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -86,7 +88,34 @@ public class Main
 //        doSlidingWindowMaximumAlgorithm();
 //        doInsertDeleteGetRandomAlgorithm();
 //        doCountCoveredBuildingsAlgorithm();
-        doReverseLinkedListAlgorithm();
+//        doReverseLinkedListAlgorithm();
+        doPathSumIIAlgorithm();
+    }
+
+    /**
+     * 113. Path Sum II
+     */
+    private static void doPathSumIIAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Path Sum II practice!");
+        LOGGER.info("Starting Path Sum II Algorithm...");
+        LOGGER.info("Path Sum II Algorithm:");
+
+        PathSumIIAlgorithm pathSumIIAlgorithm = new PathSumIIAlgorithm();
+
+        List<List<Integer>> case1 = pathSumIIAlgorithm.pathSum(PathSumIIAlgorithmData.root_1, PathSumIIAlgorithmData.targetSum_1);
+        LOGGER.info(RESULT, case1);
+        assertEquals("[[5, 4, 11, 2], [5, 8, 4, 5]]", case1.toString(), "root = [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1], targetSum = 22");
+
+        List<List<Integer>> case2 = pathSumIIAlgorithm.pathSum(PathSumIIAlgorithmData.root_2, PathSumIIAlgorithmData.targetSum_2);
+        LOGGER.info(RESULT, case2);
+        assertEquals("[]", case2.toString(), "root = [1, 2, 3], targetSum = 5");
+
+        List<List<Integer>> case3 = pathSumIIAlgorithm.pathSum(PathSumIIAlgorithmData.root_3, PathSumIIAlgorithmData.targetSum_3);
+        LOGGER.info(RESULT, case3);
+        assertEquals("[]", case3.toString(), "root = [1, 2], targetSum = 0");
+
+        LOGGER.info("Ending Path Sum II Algorithm...");
     }
 
     /**
