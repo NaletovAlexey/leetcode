@@ -13,7 +13,7 @@ public class ValidAnagramAlgorithm
     //private static final Logger LOGGER = LoggerFactory.getLogger(ValidAnagramAlgorithm.class);
 
     /**
-     * Checks if t is an anagram of s
+     * Checks if it is an anagram of s
      * @param s base String
      * @param t String to check
      * @return true if anagram

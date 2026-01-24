@@ -7,6 +7,7 @@ import com.program.training.algorithm.besttimetobuysellwithcooldown.BestTimeToBu
 import com.program.training.algorithm.binarysearch.BinarySearchAlgorithm;
 import com.program.training.algorithm.containerwithmostwater.ContainerWithMostWaterAlgorithm;
 import com.program.training.algorithm.countcoveredbuildings.partitionlabels.CountCoveredBuildingsAlgorithm;
+import com.program.training.algorithm.findallanagrams.FindAllAnagramInStringAlgorithm;
 import com.program.training.algorithm.foursum.FourSumAlgorithm;
 import com.program.training.algorithm.guessnumber.GuessNumberHigherLowerAlgorithm;
 import com.program.training.algorithm.insertdeletegetrandom.RandomizedSet;
@@ -89,7 +90,30 @@ public class Main
 //        doInsertDeleteGetRandomAlgorithm();
 //        doCountCoveredBuildingsAlgorithm();
 //        doReverseLinkedListAlgorithm();
-        doPathSumIIAlgorithm();
+//        doPathSumIIAlgorithm();
+        doFindAllAnagramInStringAlgorithm();
+    }
+
+    /**
+     * 438. Find All Anagrams in a String
+     */
+    private static void doFindAllAnagramInStringAlgorithm()
+    {
+        LOGGER.info("Hello and welcome to Find All Anagrams in a String practice!");
+        LOGGER.info("Starting Find All Anagrams in a String Algorithm...");
+        LOGGER.info("Find All Anagrams in a String Algorithm:");
+
+        FindAllAnagramInStringAlgorithm findAllAnagramInStringAlgorithm = new FindAllAnagramInStringAlgorithm();
+
+        List<Integer> case1 = findAllAnagramInStringAlgorithm.findAnagrams(FindAllAnagramInStringAlgorithmData.s_1, FindAllAnagramInStringAlgorithmData.p_1);
+        LOGGER.info(RESULT, case1);
+        assertEquals("[0, 6]", case1.toString(), "s = \"cbaebabacd\", p = \"abc\" - [0, 6]");
+
+        List<Integer> case2 = findAllAnagramInStringAlgorithm.findAnagrams(FindAllAnagramInStringAlgorithmData.s_2, FindAllAnagramInStringAlgorithmData.p_2);
+        LOGGER.info(RESULT, case2);
+        assertEquals("[0, 1, 2]", case2.toString(), "s = \"abab\", p = \"ab\" - [0, 1, 2]");
+
+        LOGGER.info("Ending Find All Anagrams in a String Algorithm...");
     }
 
     /**
