@@ -16,7 +16,7 @@ class RemoveInvalidParenthesesAlgorithmTest
 {
     public static final Logger LOGGER = LoggerFactory.getLogger(RemoveInvalidParenthesesAlgorithmTest.class);
     public static final String RESULT = "Result: {}";
-    RemoveInvalidParenthesesAlgorithm removeInvalidParenthesesAlgorithm;
+    private RemoveInvalidParenthesesAlgorithm removeInvalidParenthesesAlgorithm;
 
     @BeforeEach
     void setUp()
