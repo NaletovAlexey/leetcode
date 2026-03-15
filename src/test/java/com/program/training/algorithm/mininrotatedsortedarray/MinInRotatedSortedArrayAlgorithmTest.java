@@ -17,7 +17,7 @@ class MinInRotatedSortedArrayAlgorithmTest
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(MinInRotatedSortedArrayAlgorithmTest.class);
     private static final String RESULT = "Result: {}";
-    private final MinInRotatedSortedArrayAlgorithm minInRotatedSortedArrayAlgorithm =  new MinInRotatedSortedArrayAlgorithm();;
+    private final MinInRotatedSortedArrayAlgorithm minInRotatedSortedArrayAlgorithm =  new MinInRotatedSortedArrayAlgorithm();
 
     private int[] nums;
     private int result;
