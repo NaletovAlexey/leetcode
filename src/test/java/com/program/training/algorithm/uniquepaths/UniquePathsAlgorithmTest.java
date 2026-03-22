@@ -28,13 +28,13 @@ class UniquePathsAlgorithmTest
     void setUp()
     {
         caseNum++;
-        LOGGER.info("Unique Paths test case {}", caseNum);
+        LOGGER.info("Start Unique Paths algorithm test case {}", caseNum);
     }
 
     @AfterEach
     void tearDown()
     {
-        LOGGER.info("Unique Paths test case {}", caseNum);
+        LOGGER.info("Finish Unique Paths algorithm test case {}", caseNum);
     }
 
     @Test
