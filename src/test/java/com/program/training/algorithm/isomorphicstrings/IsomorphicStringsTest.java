@@ -32,7 +32,7 @@ class IsomorphicStringsTest
     @AfterEach
     void tearDown()
     {
-        LOGGER.info("Finish Isomorphic Strings algorithm case {}", caseNum);
+        LOGGER.info("Finish Isomorphic Strings algorithm test case {}", caseNum);
     }
 
     @Test

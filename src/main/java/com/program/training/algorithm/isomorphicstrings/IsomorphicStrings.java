@@ -1,7 +1,6 @@
 package com.program.training.algorithm.isomorphicstrings;
 
 import java.util.*;
-import java.util.stream.IntStream;
 
 /**
  * Given two strings s and t, determine if they are isomorphic.
