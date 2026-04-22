@@ -35,7 +35,7 @@ class IntersectionOfTwoArraysTest
     @AfterEach
     void tearDown()
     {
-        LOGGER.info("Intersection of Two Arrays algorithm test case {}", caseNum);
+        LOGGER.info("Finish Intersection of Two Arrays algorithm test case {}", caseNum);
     }
 
     @Test
