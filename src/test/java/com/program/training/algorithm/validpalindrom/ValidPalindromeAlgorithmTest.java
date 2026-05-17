@@ -26,13 +26,13 @@ class ValidPalindromeAlgorithmTest
     void setUp()
     {
         caseNum++;
-        LOGGER.info("Valid Palindrome algorithm test case {}", caseNum);
+        LOGGER.info("Start Valid Palindrome algorithm test case {}", caseNum);
     }
 
     @AfterEach
     void tearDown()
     {
-        LOGGER.info("Valid Palindrome algorithm test case {}", caseNum);
+        LOGGER.info("Finish Valid Palindrome algorithm test case {}", caseNum);
     }
 
     @Test
