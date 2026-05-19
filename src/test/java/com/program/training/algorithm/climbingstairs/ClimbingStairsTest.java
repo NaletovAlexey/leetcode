@@ -1,4 +1,4 @@
-package com.program.training.algorithm;
+package com.program.training.algorithm.climbingstairs;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

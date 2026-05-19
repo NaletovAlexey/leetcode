@@ -1,4 +1,4 @@
-package com.program.training.algorithm;
+package com.program.training.algorithm.climbingstairs;
 
 import java.util.HashMap;
 import java.util.Map;
