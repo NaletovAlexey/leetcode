@@ -34,7 +34,7 @@ class SubstringWithConcatenationOfAllWordsAlgorithmTest
     @AfterEach
     void tearDown()
     {
-        LOGGER.info("End Substring with Concatenation of All Words algorithm test case {}", caseNum);
+        LOGGER.info("Finish Substring with Concatenation of All Words algorithm test case {}", caseNum);
     }
 
     @Test
