@@ -6,6 +6,8 @@ import java.util.Map;
 /**
  * Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
  *
+ * <a href="https://leetcode.com/problems/lfu-cache/description/?envType=problem-list-v2&envId=ssd-ssd1-cache-system-design">...</a>
+ *
  * @author naletov
  */
 public class LRUCache

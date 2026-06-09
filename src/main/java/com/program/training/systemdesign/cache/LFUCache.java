@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  * Design and implement a data structure for a Least Frequently Used (LFU) cache.
+ * <a href="https://leetcode.com/problems/lru-cache/?envType=problem-list-v2&envId=ssd-ssd1-cache-system-design">...</a>
  *
  * @author naletov
  */

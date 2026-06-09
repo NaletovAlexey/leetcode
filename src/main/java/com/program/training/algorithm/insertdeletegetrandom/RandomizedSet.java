@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * Implement the RandomizedSet class
  *
  * <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150">...</a>
+ * <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/?envType=problem-list-v2&envId=ssd-ssd3-data-structure-design">...</a>
  *
  * @author naletov
  */

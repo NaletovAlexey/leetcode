@@ -10,6 +10,8 @@ import java.util.PriorityQueue;
  * You are part of a university admissions office and need to keep track of the kth highest test score from applicants in real-time.
  * This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
  *
+ * <a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/?envType=problem-list-v2&envId=ssd-ssd2-data-stream-processing">...</a>
+ *
  * @author naletov
  */
 class KthLargest {

@@ -3,6 +3,8 @@ package com.program.training.systemdesign.datastreamprocessing;
 /**
  * Design an algorithm that accepts a stream of characters and checks if a suffix of these characters is a string of a given array of strings words.
  *
+ * <a href="https://leetcode.com/problems/stream-of-characters/description/?envType=problem-list-v2&envId=ssd-ssd2-data-stream-processing">...</a>
+ *
  * @author naletov
  */
 public class StreamChecker
